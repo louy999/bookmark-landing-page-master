@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import "./color";
+//root
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin h3 {
+  font-weight: 500;
+  color: $Very-Dark-Blue;
+  font-size: 30px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  list-style: none;
+}
+body {
+  background-color: $white;
+  #container {
+    width: 85%;
+    margin: 20px auto;
+    header {
+      padding: 10px 0;
+      @include flex();
+      height: 50px;
+      nav {
+        @include flex();
+        ul {
+          @include flex();
+          margin-right: 30px;
+          li {
+            cursor: pointer;
+            margin: 0 10px;
+            color: $Grayish-Blue;
+            &:hover {
+              color: $Soft-Red;
+            }
+          }
+        }
+        input {
+          border: none;
+          background-color: $Soft-Red;
+          color: $white;
+          border-radius: 5px;
+          padding: 5px 10px;
+          width: 70px;
+          cursor: pointer;
+          &:hover {
+            border: 1px solid $Soft-Red;
+            color: $Soft-Red;
+            background-color: $white;
+          }
+        }
+      }
+    }
+    main {
+      padding: 50px 0;
+      .simple {
+        @include flex();
+        > div {
+          width: 50%;
+          h3 {
+            @include h3();
+          }
+          p {
+            color: $Grayish-Blue;
+            margin: 20px 0;
+            width: 100%;
+            font-size: 14px;
+          }
+          input {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 170px;
+            cursor: pointer;
+            &.chrome {
+              color: $white;
+              background-color: $Soft-Blue;
+              font-size: 14px;
+              &:hover {
+                background-color: $white;
+                color: $Soft-Blue;
+                border: 1px solid $Soft-Blue;
+              }
+            }
+
+            &.firefox {
+              margin: 10px;
+              box-shadow: 0px 5px 5px #ddd;
+              &:hover {
+                background-color: $white;
+                color: $Grayish-Blue;
+                border: 1px solid $Grayish-Blue;
+              }
+            }
+          }
+        }
+        img {
+          width: 250px;
+          z-index: 45;
+        }
+        .bg-simple {
+          position: absolute;
+          background-color: $Soft-Blue;
+          width: 250px;
+          height: 150px;
+          border-bottom-left-radius: 50%;
+          right: -5px;
+          margin-top: 80px;
+        }
+      }
+      #features {
+        margin: 100px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        h3 {
+          text-align: center;
+          width: 100%;
+          @include h3();
+        }
+        p {
+          text-align: center;
+          width: 55%;
+          color: $Grayish-Blue;
+          margin: 20px 0;
+          font-size: 14px;
+        }
+        ul {
+          width: 70%;
+          margin: 20px 0;
+          display: flex;
+          color: $Grayish-Blue;
+          justify-content: space-between;
+          border-bottom: 1px solid $Grayish-Blue;
+          padding: 0 20px;
+          overflow: hidden;
+          li {
+            cursor: pointer;
+            &:hover {
+              color: $Soft-Red;
+            }
+            &.active {
+              color: $Very-Dark-Blue;
+              overflow: hidden;
+              padding: 0 25px 25px;
+              border-bottom: 4px solid red;
+            }
+          }
+        }
+        .feat {
+          @include flex();
+          margin: 30px 0;
+          div:first-child {
+            img {
+              width: 250px;
+              z-index: 55454;
+            }
+            .bg-simple {
+              position: absolute;
+              background-color: $Soft-Blue;
+              width: 250px;
+              height: 150px;
+              border-bottom-right-radius: 50%;
+              left: -5px;
+              transform: translateY(-70%);
+              z-index: -852;
+            }
+          }
+          div:nth-child(2) {
+            width: 50%;
+            h3 {
+              text-align: start;
+            }
+            p {
+              width: 100%;
+              text-align: start;
+            }
+            .more {
+              border: none;
+              background-color: $Soft-Blue;
+              padding: 10px;
+              color: $white;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .download {
+        width: 60%;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px auto;
+        h3 {
+          color: $Very-Dark-Blue;
+          font-weight: 500;
+          margin-bottom: 20px;
+        }
+        > p {
+          color: $Grayish-Blue;
+          text-align: center;
+          font-size: 14px;
+        }
+        .browser {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          > div {
+            margin: 0 20px;
+            box-shadow: 0px 5px 5px #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            &.firefox {
+              transform: translateY(25%);
+            }
+            &.opera {
+              transform: translateY(50%);
+            }
+            .name {
+              margin-top: 20px;
+              width: 100%;
+              text-align: center;
+            }
+            .version {
+              color: $Grayish-Blue;
+              font-size: 14px;
+              margin-bottom: 30px;
+            }
+          }
+          img {
+            width: 60px;
+          }
+          input {
+            background-color: $Soft-Blue;
+            color: $white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            &:hover {
+              background-color: $white;
+              border: 1px solid $Soft-Blue;
+              color: $Soft-Blue;
+            }
+          }
+        }
+      }
+      .frequently {
+        margin: 100px auto;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        h3 {
+          font-weight: 500;
+          margin-bottom: 30px;
+        }
+        > p {
+          color: $Grayish-Blue;
+          font-size: 14px;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        .q-a {
+          width: 100%;
+          > div {
+            .ques {
+              display: flex;
+              padding: 20px 0;
+              border-top: 1px solid $Grayish-Blue;
+              border-bottom: 1px solid $Grayish-Blue;
+              justify-content: space-between;
+              cursor: pointer;
+              img {
+                width: 20px;
+                height: 15px;
+              }
+            }
+          }
+          .ans {
+            display: none;
+          }
+        }
+        input {
+          border: none;
+          border-radius: 5px;
+          color: $white;
+          background-color: $Soft-Blue;
+          margin: 20px 0;
+          padding: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.contact {
+  width: 100%;
+  left: 0;
+  background-color: $Soft-Blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  p {
+    width: 100%;
+    text-align: center;
+    color: $white;
+    margin: 30px 0;
+    &:nth-child(1) {
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+    &:nth-child(2) {
+      font-size: 25px;
+      font-weight: 500;
+      width: 40%;
+    }
+  }
+  > div {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  #email {
+    background-color: $white;
+    height: 50px;
+    padding: 10px;
+    width: 250px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    &.error::after {
+      content: "Whoops, make sure it's and email";
+      font-size: 14px;
+      background-color: $Soft-Red;
+      position: relative;
+      top: 10px;
+      color: $white;
+    }
+    input {
+      width: 85%;
+      border: none;
+      outline: none;
+      //   padding-bottom: 50px;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  input[type="button"] {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    color: $white;
+    background-color: $Soft-Red;
+    margin: 0 0 50px 20px;
+    cursor: pointer;
+    border: none;
+    &:hover {
+      background-color: $white;
+      border: 1px solid $Soft-Red;
+      color: $Soft-Red;
+    }
+  }
+}
+
+.footer {
+  background-color: $Very-Dark-Blue;
+  background-color: $white;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  .logo {
+  }
+}

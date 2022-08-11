@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  list-style: none;
+}
+
+body {
+  background-color: #fff;
+}
+body #container {
+  width: 85%;
+  margin: 20px auto;
+}
+body #container header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+body #container header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #container header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 30px;
+}
+body #container header nav ul li {
+  cursor: pointer;
+  margin: 0 10px;
+  color: hsl(229deg, 8%, 60%);
+}
+body #container header nav ul li:hover {
+  color: hsl(0deg, 94%, 66%);
+}
+body #container header nav input {
+  border: none;
+  background-color: hsl(0deg, 94%, 66%);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 70px;
+  cursor: pointer;
+}
+body #container header nav input:hover {
+  border: 1px solid hsl(0deg, 94%, 66%);
+  color: hsl(0deg, 94%, 66%);
+  background-color: #fff;
+}
+body #container main {
+  padding: 50px 0;
+}
+body #container main .simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #container main .simple > div {
+  width: 50%;
+}
+body #container main .simple > div h3 {
+  font-weight: 500;
+  color: hsl(229deg, 31%, 21%);
+  font-size: 30px;
+}
+body #container main .simple > div p {
+  color: hsl(229deg, 8%, 60%);
+  margin: 20px 0;
+  width: 100%;
+  font-size: 14px;
+}
+body #container main .simple > div input {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 170px;
+  cursor: pointer;
+}
+body #container main .simple > div input.chrome {
+  color: #fff;
+  background-color: hsl(231deg, 69%, 60%);
+  font-size: 14px;
+}
+body #container main .simple > div input.chrome:hover {
+  background-color: #fff;
+  color: hsl(231deg, 69%, 60%);
+  border: 1px solid hsl(231deg, 69%, 60%);
+}
+body #container main .simple > div input.firefox {
+  margin: 10px;
+  box-shadow: 0px 5px 5px #ddd;
+}
+body #container main .simple > div input.firefox:hover {
+  background-color: #fff;
+  color: hsl(229deg, 8%, 60%);
+  border: 1px solid hsl(229deg, 8%, 60%);
+}
+body #container main .simple img {
+  width: 250px;
+  z-index: 45;
+}
+body #container main .simple .bg-simple {
+  position: absolute;
+  background-color: hsl(231deg, 69%, 60%);
+  width: 250px;
+  height: 150px;
+  border-bottom-left-radius: 50%;
+  right: -5px;
+  margin-top: 80px;
+}
+body #container main #features {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body #container main #features h3 {
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  color: hsl(229deg, 31%, 21%);
+  font-size: 30px;
+}
+body #container main #features p {
+  text-align: center;
+  width: 55%;
+  color: hsl(229deg, 8%, 60%);
+  margin: 20px 0;
+  font-size: 14px;
+}
+body #container main #features ul {
+  width: 70%;
+  margin: 20px 0;
+  display: flex;
+  color: hsl(229deg, 8%, 60%);
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(229deg, 8%, 60%);
+  padding: 0 20px;
+  overflow: hidden;
+}
+body #container main #features ul li {
+  cursor: pointer;
+}
+body #container main #features ul li:hover {
+  color: hsl(0deg, 94%, 66%);
+}
+body #container main #features ul li.active {
+  color: hsl(229deg, 31%, 21%);
+  overflow: hidden;
+  padding: 0 25px 25px;
+  border-bottom: 4px solid red;
+}
+body #container main #features .feat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+body #container main #features .feat div:first-child img {
+  width: 250px;
+  z-index: 55454;
+}
+body #container main #features .feat div:first-child .bg-simple {
+  position: absolute;
+  background-color: hsl(231deg, 69%, 60%);
+  width: 250px;
+  height: 150px;
+  border-bottom-right-radius: 50%;
+  left: -5px;
+  transform: translateY(-70%);
+  z-index: -852;
+}
+body #container main #features .feat div:nth-child(2) {
+  width: 50%;
+}
+body #container main #features .feat div:nth-child(2) h3 {
+  text-align: start;
+}
+body #container main #features .feat div:nth-child(2) p {
+  width: 100%;
+  text-align: start;
+}
+body #container main #features .feat div:nth-child(2) .more {
+  border: none;
+  background-color: hsl(231deg, 69%, 60%);
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body #container main .download {
+  width: 60%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+body #container main .download h3 {
+  color: hsl(229deg, 31%, 21%);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+body #container main .download > p {
+  color: hsl(229deg, 8%, 60%);
+  text-align: center;
+  font-size: 14px;
+}
+body #container main .download .browser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #container main .download .browser > div {
+  margin: 0 20px;
+  box-shadow: 0px 5px 5px #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body #container main .download .browser > div.firefox {
+  transform: translateY(25%);
+}
+body #container main .download .browser > div.opera {
+  transform: translateY(50%);
+}
+body #container main .download .browser > div .name {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+body #container main .download .browser > div .version {
+  color: hsl(229deg, 8%, 60%);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+body #container main .download .browser img {
+  width: 60px;
+}
+body #container main .download .browser input {
+  background-color: hsl(231deg, 69%, 60%);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+body #container main .download .browser input:hover {
+  background-color: #fff;
+  border: 1px solid hsl(231deg, 69%, 60%);
+  color: hsl(231deg, 69%, 60%);
+}
+body #container main .frequently {
+  margin: 100px auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body #container main .frequently h3 {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+body #container main .frequently > p {
+  color: hsl(229deg, 8%, 60%);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+body #container main .frequently .q-a {
+  width: 100%;
+}
+body #container main .frequently .q-a > div .ques {
+  display: flex;
+  padding: 20px 0;
+  border-top: 1px solid hsl(229deg, 8%, 60%);
+  border-bottom: 1px solid hsl(229deg, 8%, 60%);
+  justify-content: space-between;
+  cursor: pointer;
+}
+body #container main .frequently .q-a > div .ques img {
+  width: 20px;
+  height: 15px;
+}
+body #container main .frequently .q-a .ans {
+  display: none;
+}
+body #container main .frequently input {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: hsl(231deg, 69%, 60%);
+  margin: 20px 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.contact {
+  width: 100%;
+  left: 0;
+  background-color: hsl(231deg, 69%, 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact p {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin: 30px 0;
+}
+.contact p:nth-child(1) {
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.contact p:nth-child(2) {
+  font-size: 25px;
+  font-weight: 500;
+  width: 40%;
+}
+.contact > div {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.contact #email {
+  background-color: #fff;
+  height: 50px;
+  padding: 10px;
+  width: 250px;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+.contact #email.error::after {
+  content: "Whoops, make sure it's and email";
+  font-size: 14px;
+  background-color: hsl(0deg, 94%, 66%);
+  position: relative;
+  top: 10px;
+  color: #fff;
+}
+.contact #email input {
+  width: 85%;
+  border: none;
+  outline: none;
+}
+.contact #email img {
+  width: 20px;
+  height: 20px;
+}
+.contact input[type=button] {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: hsl(0deg, 94%, 66%);
+  margin: 0 0 50px 20px;
+  cursor: pointer;
+  border: none;
+}
+.contact input[type=button]:hover {
+  background-color: #fff;
+  border: 1px solid hsl(0deg, 94%, 66%);
+  color: hsl(0deg, 94%, 66%);
+}
+
+.footer {
+  background-color: hsl(229deg, 31%, 21%);
+  background-color: #fff;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}/*# sourceMappingURL=style.css.map */
