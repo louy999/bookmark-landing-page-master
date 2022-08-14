@@ -283,16 +283,31 @@ body #container main .frequently .q-a > div .ques {
   display: flex;
   padding: 20px 0;
   border-top: 1px solid hsl(229deg, 8%, 60%);
-  border-bottom: 1px solid hsl(229deg, 8%, 60%);
   justify-content: space-between;
   cursor: pointer;
+}
+body #container main .frequently .q-a > div .ques p:hover {
+  color: hsl(0deg, 94%, 66%);
 }
 body #container main .frequently .q-a > div .ques img {
   width: 20px;
   height: 15px;
 }
-body #container main .frequently .q-a .ans {
+body #container main .frequently .q-a > div .ques img.open {
+  transform: rotateZ(180deg);
+  transition: 0.3s;
+}
+body #container main .frequently .q-a > div .ques img.close {
+  transform: rotateZ(0deg);
+  transition: 0.3s;
+}
+body #container main .frequently .q-a #ans {
+  color: hsl(229deg, 8%, 60%);
+  font-size: 14px;
+  line-height: 1.8;
+  padding: 10px;
   display: none;
+  transition: 0.3;
 }
 body #container main .frequently input {
   border: none;
@@ -342,18 +357,25 @@ body #container main .frequently input {
   flex-wrap: wrap;
   border-radius: 5px;
 }
-.contact #email.error::after {
-  content: "Whoops, make sure it's and email";
-  font-size: 14px;
-  background-color: hsl(0deg, 94%, 66%);
-  position: relative;
-  top: 10px;
+.contact #email .error {
+  display: none;
   color: #fff;
+  background-color: hsl(0deg, 94%, 66%);
+  width: 250px;
+  font-size: 12px;
+  position: relative;
+  top: 15px;
+  right: 12px;
+  padding: 10px 20px;
+  text-align: start;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .contact #email input {
   width: 85%;
   border: none;
   outline: none;
+  z-index: 1545;
 }
 .contact #email img {
   width: 20px;
@@ -382,10 +404,64 @@ body #container main .frequently input {
 
 .footer {
   background-color: hsl(229deg, 31%, 21%);
-  background-color: #fff;
-  color: #fff;
+  width: 100vw;
+}
+.footer .con {
   display: flex;
   justify-content: space-between;
+  width: 80%;
+  padding: 10px 0;
+  margin: 0 auto;
   align-items: center;
-  height: 50px;
+}
+.footer .con .con-logo {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer .con .con-logo .logo {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
+.footer .con .con-logo .logo i {
+  width: 20px;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  background-color: hsl(231deg, 69%, 60%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-right: 5px;
+}
+.footer .con .con-logo .contact {
+  background-color: transparent;
+}
+.footer .con .con-logo .contact ul {
+  display: flex;
+  color: hsl(229deg, 8%, 60%);
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .con .con-logo .contact ul li {
+  padding: 0 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.footer .con .con-logo .contact ul li:hover {
+  color: hsl(0deg, 94%, 66%);
+}
+.footer .con .icon i {
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #fff;
+}
+.footer .con .icon i:hover {
+  color: hsl(0deg, 94%, 66%);
 }/*# sourceMappingURL=style.css.map */

@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script
+      src="https://kit.fontawesome.com/4d905c5a1a.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       .attribution {
         font-size: 11px;
@@ -63,9 +67,11 @@
             them on the go.
           </p>
           <ul>
-            <li class="active">Simple Bookmarking</li>
-            <li>Speedy Searching</li>
-            <li>Easy Sharing</li>
+            <li onclick="switchTab(this)" id="simple" class="active">
+              Simple Bookmarking
+            </li>
+            <li onclick="switchTab(this)" id="speedy">Speedy Searching</li>
+            <li onclick="switchTab(this)" id="easy">Easy Sharing</li>
           </ul>
           <div class="feat">
             <div>
@@ -122,7 +128,7 @@
                 <p>What is Bookmark?</p>
                 <img src="./images/icon-arrow.svg" alt="" />
               </div>
-              <div class="ans">
+              <div class="close" id="ans">
                 Lorem ipsum dolor sit amen, consenters nipissing elite. Fusee
                 incident justs eger utricles fringiest. Phallus islanding ipsum
                 quia quam ornate mattie.
@@ -133,7 +139,7 @@
                 <p>How can I request a new browser?</p>
                 <img src="./images/icon-arrow.svg" alt="" />
               </div>
-              <div class="ans">
+              <div class="close" id="ans">
                 Vivamus luctus eros aliquet convallis ultricies. Mauris augue
                 massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
                 luctus eros aliquet convallis ultricies. Mauris augue massa,
@@ -147,7 +153,7 @@
                 <p>Is there a mobile app?</p>
                 <img src="./images/icon-arrow.svg" alt="" />
               </div>
-              <div class="ans">
+              <div class="close" id="ans">
                 Sed consectetur quam id neque fermentum accumsan. Praesent
                 luctus vestibulum dolor, ut condimentum urna vulputate eget.
                 Cras in ligula quis est pharetra mattis sit amet pharetra purus.
@@ -159,7 +165,7 @@
                 <p>What about other Chromium browsers?</p>
                 <img src="./images/icon-arrow.svg" alt="" />
               </div>
-              <div class="ans">
+              <div class="close" id="ans">
                 nteger condimentum ipsum id imperdiet finibus. Vivamus in
                 placerat mi, at euismod dui. Aliquam vitae neque eget nisl
                 gravida pellentesque non ut velit. More Info
@@ -181,26 +187,32 @@
             name=""
             id=""
           />
-          <!-- <small>Whoops, make sure it's and email</small> -->
+          <div class="error">Whoops, make sure it's and email</div>
         </div>
         <input type="button" class="contact-btn" value="Contact Us" />
       </div>
     </div>
     <div class="footer">
-      <div class="logo">
-        <img src="./images//logo-bookmark.svg" alt="" />
-        <span>bookmark</span>
+      <div class="con">
+        <div class="con-logo">
+          <div class="logo">
+            <i class="fa-solid fa-bookmark"></i>
+            <span>bookmark</span>
+          </div>
+          <div class="contact">
+            <ul>
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+        <div class="icon">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
       </div>
-      <div class="ico"></div>
     </div>
-
-    <!--
-     
-    Intelligent search Our powerful search feature
-    will help you find saved sites in no time at all. No need to trawl through
-    all of your bookmarks. More Info Share your bookmarks Easily share your
-    bookmarks and collections with others. Create a shareable link that you can
-    send at the click of a button. More Info    -->
 
     <footer>
       <p class="attribution">

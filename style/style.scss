@@ -279,17 +279,34 @@ body {
               display: flex;
               padding: 20px 0;
               border-top: 1px solid $Grayish-Blue;
-              border-bottom: 1px solid $Grayish-Blue;
               justify-content: space-between;
               cursor: pointer;
+              p {
+                &:hover {
+                  color: $Soft-Red;
+                }
+              }
               img {
                 width: 20px;
                 height: 15px;
+                &.open {
+                  transform: rotateZ(180deg);
+                  transition: 0.3s;
+                }
+                &.close {
+                  transform: rotateZ(0deg);
+                  transition: 0.3s;
+                }
               }
             }
           }
-          .ans {
+          #ans {
+            color: $Grayish-Blue;
+            font-size: 14px;
+            line-height: 1.8;
+            padding: 10px;
             display: none;
+            transition: 0.3;
           }
         }
         input {
@@ -341,18 +358,27 @@ body {
     width: 250px;
     flex-wrap: wrap;
     border-radius: 5px;
-    &.error::after {
-      content: "Whoops, make sure it's and email";
-      font-size: 14px;
-      background-color: $Soft-Red;
-      position: relative;
-      top: 10px;
+    // border: 2px solid $Soft-Red;
+    .error {
+      display: none;
       color: $white;
+      background-color: $Soft-Red;
+      width: 250px;
+      font-size: 12px;
+      position: relative;
+      top: 15px;
+      right: 12px;
+      padding: 10px 20px;
+      text-align: start;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      // margin-top: 30px;
     }
     input {
       width: 85%;
       border: none;
       outline: none;
+      z-index: 1545;
       //   padding-bottom: 50px;
     }
 
@@ -381,12 +407,67 @@ body {
 
 .footer {
   background-color: $Very-Dark-Blue;
-  background-color: $white;
-  color: $white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  .logo {
+  width: 100vw;
+  .con {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10px 0;
+    margin: 0 auto;
+    align-items: center;
+    .con-logo {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      .logo {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        width: 100%;
+        color: $white;
+        i {
+          width: 20px;
+          align-items: center;
+          height: 20px;
+          font-size: 10px;
+          background-color: $Soft-Blue;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $white;
+          margin-right: 5px;
+        }
+      }
+      .contact {
+        background-color: transparent;
+        ul {
+          display: flex;
+          color: $Grayish-Blue;
+          justify-content: space-between;
+          align-items: center;
+          li {
+            padding: 0 10px;
+            font-size: 13px;
+            cursor: pointer;
+            &:hover {
+              color: $Soft-Red;
+            }
+          }
+        }
+      }
+    }
+    .icon {
+      i {
+        font-size: 20px;
+        cursor: pointer;
+        margin: 0 10px;
+        color: $white;
+        &:hover {
+          color: $Soft-Red;
+        }
+      }
+    }
   }
 }
